@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Sweat Books</title>
-    <!--<link rel="stylesheet" href="css/style.css" />-->
+    <link rel="stylesheet" href="css/style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -18,7 +18,7 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body>
+  <body class="container-lg bg-light">
     <header>
       <nav class="navbar navbar-expand-md">
         <div class="container-fluid">
@@ -84,106 +84,93 @@
     </header>
     <div id="contact-content">
       <h2>Contact Us &#128234;</h2>
-      <div class="container--centered-row">
+      <div>
         <form method="post" action="https://hnitest.go.yj.fr">
-          <table class="invisible-table">
-            <tr>
-              <td>
-                <label>
-                  Last Name
-                  <input
-                    class="contact-form"
-                    id="lastname"
-                    type="text"
-                    name="lastname"
-                    required
-                    placeholder="Your last name"
-                  />
-                </label>
-              </td>
-              <td>
-                <label>
-                  First Name
-                  <input
-                    class="contact-form"
-                    id="firstname"
-                    type="text"
-                    name="firstname"
-                    required
-                    placeholder="Your first name"
-                  />
-                </label>
-              </td>
-            </tr>
-            <tr>
-              <td colspan="2">
-                <label>
-                  Mail
-                  <input
-                    class="contact-form"
-                    id="mail"
-                    type="email"
-                    name="mail"
-                    placeholder="yourmail@yahoo.com"
-                    required
-                  />
-                </label>
-              </td>
-            </tr>
-            <tr>
-              <td colspan="2">
-                <label>
-                  Request
-                  <textarea
-                    class="contact-form"
-                    name="request"
-                    id="request"
-                    cols="66"
-                    rows="10"
-                    required
-                    placeholder="Your message : your question, your request for a custom-made book cover, etc."
-                  ></textarea>
-                </label>
-              </td>
-            </tr>
-            <tr>
-              <td colspan="2">
-                <label>
-                  Country
-                  <select
-                    class="contact-form"
-                    name="country"
-                    id="country"
-                    required
-                    size="1"
-                  >
-                    <option value="" disabled selected>
-                      -- Choose your country --
-                    </option>
-                    <option value="France">France</option>
-                    <option value="Belgium">Belgium</option>
-                    <option value="Switzerland">Switzerland</option>
-                  </select>
-                </label>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label class="button">
-                  <span class="button--visible-part">Reset</span>
-                  <span class="button--hidden-part">&#11118;</span>
-                  <input type="reset" hidden
-                /></label>
-              </td>
-              <td>
-                <label class="button">
-                  <span class="button--visible-part">Send</span>
-                  <span class="button--hidden-part">&#11162;</span>
-                  <input type="submit" hidden
-                /></label>
-              </td>
-            </tr>
-          </table>
+          <div class="row g-3">
+            <div class="col">
+              <label class="form-label d-block">
+                Last Name
+                <input
+                  class="form-control"
+                  id="lastname"
+                  type="text"
+                  name="lastname"
+                  required
+                  placeholder="Your last name"
+              /></label>
+            </div>
+            <div class="col">
+              <label class="form-label d-block">
+                First Name
+                <input
+                  class="form-control"
+                  id="firstname"
+                  type="text"
+                  name="firstname"
+                  required
+                  placeholder="Your first name"
+                />
+              </label>
+            </div>
+          </div>
+          <div>
+            <label class="form-label d-block">
+              Mail
+              <input
+                class="form-control"
+                id="mail"
+                type="email"
+                name="mail"
+                placeholder="yourmail@yahoo.com"
+                required
+              />
+            </label>
+          </div>
+          <div>
+            <label class="form-label d-block">
+              Request
+              <textarea
+                class="form-control"
+                name="request"
+                id="request"
+                cols="66"
+                rows="10"
+                required
+                placeholder="Your message : your question, your request for a custom-made book cover, etc."
+              ></textarea>
+            </label>
+          </div>
+          <div>
+            <label class="form-label d-block">
+              Country
+              <select
+                class="form-select"
+                name="country"
+                id="country"
+                required
+                size="1"
+              >
+                <option value="" disabled selected>
+                  -- Choose your country --
+                </option>
+                <option value="France">France</option>
+                <option value="Belgium">Belgium</option>
+                <option value="Switzerland">Switzerland</option>
+              </select>
+            </label>
+          </div>
+          <div class="row g-3">
+            <div class="col-auto">
+              <label class="btn"
+                >Reset &#11118; <input type="reset" hidden
+              /></label>
+            </div>
+            <div class="col-auto">
+              <label class="btn"
+                >Send &#11162; <input type="submit" hidden
+              /></label>
+            </div>
+          </div>
         </form>
       </div>
     </div>

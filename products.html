@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Sweat Books</title>
-    <!--<link rel="stylesheet" href="css/style.css" />-->
+    <link rel="stylesheet" href="css/style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -18,8 +18,19 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function () {
+        var tooltipTriggerList = [].slice.call(
+          document.querySelectorAll('[data-bs-toggle="tooltip"]'),
+        );
+        var tooltipList = tooltipTriggerList.map(function (element) {
+          return new bootstrap.Tooltip(element);
+        });
+      });
+    </script>
   </head>
-  <body>
+  <body class="container-lg">
     <header>
       <nav class="navbar navbar-expand-md">
         <div class="container-fluid">
@@ -63,13 +74,16 @@
                 >
               </li>
               <li class="btn-group">
-                <a href="products.html" class="nav-item nav-link active">Products</a>
+                <a href="products.html" class="nav-item nav-link active"
+                  >Products</a
+                >
                 <button
                   type="button"
                   class="btn dropdown-toggle"
                   data-bs-toggle="dropdown"
                 ></button>
                 <ul class="dropdown-menu dropdown-menu-end">
+                  <li class="dropdown-header">Products</li>
                   <li>
                     <a href="fabrics.html" class="dropdown-item">Fabrics</a>
                   </li>
@@ -83,98 +97,152 @@
         </div>
       </nav>
     </header>
-    <div id="products-content">
+    <div id="products-content" class="container">
       <h2>Our products &#129525;</h2>
-      <p class="center">Every book deserves a perfect fit. Choose your size, favorite fabric and other options. We stitch your custom cover and send it to you !</p>
+      <p class="center">
+        Every book deserves a perfect fit. Choose your size, favorite fabric and
+        other options. We stitch your custom cover and send it to you !
+      </p>
       <hr />
       <h3>Size &#8616;</h3>
-      <table>
-        <tr>
-          <th></th>
-          <td>Pocket book</td>
-          <td>Manga book</td>
-          <td>A5 book</td>
-          <td>Comics book</td>
-        </tr>
-        <tr>
-          <th>Real size</th>
-          <td>11*18cm</td>
-          <td>12*18</td>
-          <td>14.85*21cm</td>
-          <td>21*29.7</td>
-        </tr>
-        <tr>
-          <th>Price</th>
-          <td>5&euro;</td>
-          <td>6&euro;</td>
-          <td>8&euro;</td>
-          <td>17&euro;</td>
-        </tr>
-      </table>
+      <div class="table-responsive">
+        <table class="table table-striped table-sm text-center">
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Real size</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Pocket book</td>
+              <td>11*18cm</td>
+              <td>5&euro;</td>
+            </tr>
+            <tr>
+              <td>Manga book</td>
+              <td>12*18</td>
+              <td>6&euro;</td>
+            </tr>
+            <tr>
+              <td>A5 book</td>
+              <td>14.85*21cm</td>
+              <td>8&euro;</td>
+            </tr>
+            <tr>
+              <td>Comics book</td>
+              <td>21*29.7</td>
+              <td>17&euro;</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <hr />
       <h3>Pattern &#127912;</h3>
-      <table>
-        <tr>
-          <th></th>
-          <td>Unique color</td>
-          <td>Non directional print pattern</td>
-          <td>Directional print pattern</td>
-        </tr>
-        <tr>
-          <th>Example</th>
-          <td>
-            <img
-              src="images/outside_fabrics/one_color.png"
-              alt="One color fabric"
-            />
-          </td>
-          <td>
-            <img
-              src="images/outside_fabrics/flower_white.png"
-              alt="White flower pattern fabric"
-            />
-          </td>
-          <td>
-            <img
-              src="images/outside_fabrics/japan.png"
-              alt="Japan pattern fabric"
-            />
-          </td>
-        </tr>
-        <tr>
-          <th>Price</th>
-          <td>+0&euro;</td>
-          <td>+1&euro;</td>
-          <td>+4&euro;</td>
-        </tr>
-      </table>
+      <div class="table-responsive">
+        <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Example</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Unique color</td>
+              <td>
+                <img
+                  src="images/outside_fabrics/one_color.png"
+                  alt="One color fabric"
+                  class="img-fluid"
+                />
+              </td>
+              <td>+0&euro;</td>
+            </tr>
+            <tr>
+              <td>Non directional print pattern</td>
+              <td>
+                <img
+                  src="images/outside_fabrics/flower_white.png"
+                  alt="White flower pattern fabric"
+                  class="img-fluid"
+                />
+              </td>
+              <td>+1&euro;</td>
+            </tr>
+            <tr>
+              <td>Directional print pattern</td>
+              <td>
+                <img
+                  src="images/outside_fabrics/japan.png"
+                  alt="Japan pattern fabric"
+                  class="img-fluid"
+                />
+              </td>
+              <td>+4&euro;</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <hr />
       <h3>Options &#128295;</h3>
-      <table>
-        <tr>
-          <th></th>
-          <td class="explainable">
-            Vegan Leather &#10068;
-            <p class="hidden-hint">
-              On the front side of the cover, make it more rigid.
-            </p>
-          </td>
-          <td class="explainable">
-            Button with rope &#10068;
-            <p class="hidden-hint">Instead of a snap button.</p>
-          </td>
-        </tr>
-        <tr>
-          <th>Example</th>
-          <td><img src="images/sweat_book_24.png" alt="Example vegan leather"/></td>
-          <td><img src="images/button.png"/ alt="Example button with rope"/></td>
-        </tr>
-        <tr>
-          <th>Price</th>
-          <td>+3&euro;</td>
-          <td>+1&euro;</td>
-        </tr>
-      </table>
+      <div class="table-responsive">
+        <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th>Option</th>
+              <th>Example</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                Vegan Leather
+                <p
+                  class="text-center"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="bottom"
+                  title="On the front side of the cover, make it more rigid."
+                >
+                  &#10068;
+                </p>
+              </td>
+              <td>
+                <img
+                  src="images/sweat_book_24.png"
+                  alt="Example vegan leather"
+                  class="img-fluid"
+                />
+              </td>
+              <td>+3&euro;</td>
+            </tr>
+            <tr>
+              <td>
+                Button with rope
+                <p
+                  class="text-center"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="bottom"
+                  title="Instead of a snap button."
+                >
+                  &#10068;
+                </p>
+              </td>
+              <td>
+                <img
+                  src="images/button.png"
+                  alt="Example button with rope"
+                  class="img-fluid"
+                />
+              </td>
+              <td>+1&euro;</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <hr />
       <h3>Details</h3>
       <p>
@@ -182,7 +250,9 @@
         color) and be reinforced with protective padding.
       </p>
       <p>
-        Each cover is hand-sewn and ready to ship within 1–2 business days. Please note that delivery times may vary depending on the shipping provider.
+        Each cover is hand-sewn and ready to ship within 1–2 business days.
+        Please note that delivery times may vary depending on the shipping
+        provider.
       </p>
     </div>
     <footer>

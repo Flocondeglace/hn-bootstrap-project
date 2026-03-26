@@ -19,8 +19,9 @@
     ></script>
 
     <style>
-      img {
-        max-height: 450px;
+      .carousel-item {
+        min-height: 280px;
+        height: 280px;
       }
     </style>
   </head>
@@ -90,11 +91,15 @@
         </div>
       </nav>
     </header>
-    <div id="gallery-content">
+    <div id="gallery-content" class="container">
       <h2>Photo Gallery &#128247;</h2>
       <h3>Some of our previous creations</h3>
-      <div class="container-sm border">
-        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="container-sm">
+        <div
+          id="myCarousel"
+          class="carousel carousel-dark slide"
+          data-bs-ride="carousel"
+        >
           <!-- Carousel indicators -->
           <ol class="carousel-indicators">
             <li
@@ -109,32 +114,32 @@
 
           <!-- Wrapper for carousel items -->
           <div class="carousel-inner">
-            <div class="carousel-item active">
+            <div class="carousel-item text-center active">
               <img
                 src="images/sweat_book_1.png"
-                class="d-block w-30"
                 alt="Example 1"
+                class="img-fluid h-100"
               />
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item text-center">
               <img
                 src="images/sweat_book_2.png"
-                class="d-block w-30"
                 alt="Example 2"
+                class="img-fluid h-100"
               />
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item text-center">
               <img
                 src="images/sweat_book_3.png"
-                class="d-block w-30"
                 alt="Example 3"
+                class="img-fluid h-100"
               />
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item text-center">
               <img
                 src="images/sweat_book_4.png"
-                class="d-block w-30"
                 alt="Example 4"
+                class="img-fluid h-100"
               />
             </div>
           </div>
