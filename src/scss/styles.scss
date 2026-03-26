@@ -1,0 +1,38 @@
+/* Colors */
+$light: #f8f3e1;
+$primary: #aeb784;
+$secondary: #e3dbbb;
+$dark: #41431b;
+
+/* Borders */
+$border-style: dashed;
+$border-radius: 0.4rem;
+
+.carousel-item {
+  min-height: 280px;
+  height: 280px;
+}
+
+/* Global styles */
+h2 {
+  text-align: center;
+}
+
+hr {
+  border: dashed 1px #aeb784;
+  margin: 3em;
+}
+
+footer {
+  margin-top: 1em;
+  font-size: xx-small;
+  color: $dark;
+}
+
+#fabrics-content img,
+#products-content img {
+  max-height: 150px;
+}
+
+// Import all of Bootstrap’s CSS
+@import "bootstrap/scss/bootstrap";
