@@ -1,0 +1,448 @@
+body {
+  box-sizing: border-box;
+  max-width: 960px;
+  background-color: #f8f3e1;
+  margin: 1em auto;
+  padding: 1em 2em;
+  border: #aeb784 3px dashed;
+  border-radius: 12px;
+}
+
+hr {
+  border: dashed 1px #aeb784;
+  margin: 3em;
+}
+
+/* ==================== Reusable styles ==================== */
+
+/* ========== Text styles ========== */
+h1,
+h2 {
+  font-family: cursive;
+}
+
+h3,
+a,
+p {
+  font-family: ui-rounded;
+}
+
+h1 {
+  color: #41431b;
+  text-align: center;
+  transition: all 1.5s ease-out;
+  width: 250px;
+  padding: 0;
+  margin: 0;
+}
+
+h1:hover {
+  transform: scale(1.3);
+}
+
+h2 {
+  text-align: center;
+}
+
+h3 {
+  padding: 0;
+  margin: 0.3em 0em;
+}
+
+a {
+  color: #41431b;
+}
+
+p.center {
+  text-align: center;
+}
+
+b.emphasize {
+  color: #1c1d0c;
+  font-size: 1.2em;
+}
+
+.selected {
+  font-weight: bold;
+  background-color: #aeb784;
+}
+
+/* ========== Table styles ========== */
+table {
+  border-collapse: collapse;
+  text-align: center;
+  margin: auto;
+}
+
+td,
+th {
+  padding: 0.5em 1em;
+  border: #41431b dashed 1px;
+}
+
+th {
+  text-align: left;
+}
+
+table tr:first-child th {
+  /* Hide first cell of table */
+  border: none;
+}
+
+.invisible-table td {
+  border: none;
+  text-align: left;
+}
+
+/* ========== Images styles ========== */
+img {
+  transition: all 0.1s ease-in;
+}
+
+img:hover {
+  transform: scale(1.03);
+}
+
+#products-content img,
+#fabrics-content img {
+  max-height: 8em;
+  max-width: 16em;
+}
+
+img.large-animated-image {
+  margin: 1em;
+  max-width: 20em;
+  animation: emph 2s ease-in-out alternate infinite;
+}
+
+/* ========== Container styles ========== */
+.container--centered,
+.container--centered-row,
+.container--row {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+
+.container--centered {
+  flex-direction: column;
+}
+
+.container--centered,
+.container--centered-row {
+  align-items: center;
+}
+
+.container--row {
+  align-items: flex-start;
+}
+
+.container--row,
+.container--centered-row {
+  flex-wrap: wrap;
+}
+
+.container--carousel-images {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1em;
+  overflow-x: scroll;
+}
+
+/* ===== Element styles ===== */
+.container--row__cell {
+  max-width: 380px;
+  padding: 1em;
+  border: #aeb784 dashed 1px;
+  border-radius: 6px;
+}
+
+/* ========== Hidden hint styles ========== */
+/* explainable class is on element that should show a hint (hidden-hint child) on hover */
+.hidden-hint {
+  display: none;
+}
+
+.explainable:hover {
+  position: relative;
+  cursor: help;
+  font-weight: bold;
+}
+
+.explainable:hover .hidden-hint {
+  display: block;
+  position: absolute;
+  bottom: 2em;
+  right: 0;
+  background-color: #e3dbbb;
+  padding: 0.5em;
+  font-size: 0.8em;
+  z-index: 1;
+  text-align: justify;
+  font-weight: normal;
+}
+
+/* ==================== Animation ==================== */
+
+@keyframes emph {
+  from {
+    transform: rotate(-2deg);
+    scale: 1.02;
+  }
+  to {
+    transform: rotate(2deg);
+    scale: 0.98;
+  }
+}
+
+/* ==================== Header ==================== */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+
+/* ==================== Navigation ==================== */
+ul.nav,
+ul.nav--hidden {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul.nav {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+ul.nav--hidden {
+  display: none;
+  position: absolute;
+  margin: -0.75em 0.75em;
+}
+
+ul.nav a {
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  width: 100px;
+  height: fit-content;
+  /* Specific to not hidden nav */
+  margin: 0.4em;
+  padding: 0.4em;
+  border: #41431b dashed 1px;
+  border-radius: 4px;
+}
+
+ul.nav--hidden a {
+  margin: 0;
+  padding: 0.5em 0;
+  background-color: #f8f3e1;
+  border: #aeb784 dashed 1px;
+}
+
+.nav a:hover {
+  transform: scale(1.02);
+  background-color: #e3dbbb;
+  box-shadow: 2px 2px 2px #aeb784;
+}
+
+/* Show hidden nav on hover of parent */
+.nav li:hover ul.nav--hidden {
+  display: block;
+}
+.nav ul.nav--hidden:hover {
+  display: block;
+}
+
+/* ==================== Footer ==================== */
+p.footer {
+  text-align: center;
+  font-size: 0.6em;
+  margin-top: 6em;
+}
+
+/* ==================== Home ==================== */
+
+p.quote {
+  position: relative;
+  width: max-content;
+  aspect-ratio: 1/1;
+  font-style: italic;
+  font-size: 1.5em;
+  padding: 2em 2em;
+  margin: 0em 2em;
+  border: #aeb784 solid 1px;
+  border-radius: 6px;
+  box-shadow: 1px 1px 1px #aeb784;
+  transition:
+    scale 0.4s ease-out,
+    box-shadow 0.1s ease-out;
+  text-align: center;
+  align-content: center;
+}
+
+p.quote::after {
+  /* Quote decorative interior border */
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  top: 5%;
+  left: 5%;
+  border: #aeb784 dashed 1px;
+  border-radius: 6px;
+}
+
+p.quote:hover {
+  transform: scale(1.05);
+
+  box-shadow: 2px 2px 2px #aeb784;
+}
+
+/* ==================== About ==================== */
+
+.person {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+  border: dashed 2px #aeb784;
+  border-radius: 5px;
+  min-height: 350px;
+  max-width: 220px;
+  text-align: center;
+}
+
+.person img:hover {
+  transform: none;
+}
+
+.person:hover {
+  transform: scale(1.02);
+  background-color: #e3dbbb;
+  box-shadow: 4px 4px 4px #aeb784;
+}
+
+/* ==================== Gallery ==================== */
+
+.container--carousel-images img {
+  width: 14em;
+  max-height: 20em;
+  margin-left: 14em;
+  margin-right: 14em;
+}
+
+.container--carousel-images {
+  width: 15em;
+  overflow-x: hidden;
+}
+
+.carousel-slider {
+  margin-top: 1em;
+}
+
+.carousel-slider a {
+  display: inline-flex;
+  width: 1.5em;
+  height: 1.5em;
+  background-color: #e3dbbb;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  border: dashed 1px #41431b;
+  color: black;
+  text-decoration: none;
+}
+
+.carousel-slider a:hover {
+  background-color: #aeb784;
+  font-weight: bold;
+
+  transform: scale(1.02);
+  box-shadow: 1px 1px 1px #aeb784;
+}
+
+.carousel-slider a:active {
+  color: green;
+}
+
+/* ==================== Contact Form ==================== */
+
+label {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+input,
+textarea,
+select,
+.button {
+  border: #41431b dashed 1px;
+  border-radius: 6px;
+  padding: 0.5em;
+  margin: 0.5em 0;
+  box-sizing: border-box; /* Include padding/border in element's width */
+  width: 100%;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="email"]:invalid {
+  background-color: rgb(255, 210, 210);
+}
+
+input[type="email"]:valid,
+input[type="text"]:valid,
+textarea:valid {
+  background-color: rgb(240, 255, 240);
+}
+
+.button,
+select {
+  background-color: #e3dbbb;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+  text-align: center;
+  min-height: 3.5em;
+  font-weight: normal;
+  font-size: 0.9em;
+  transition:
+    box-shadow 0.3s ease-out,
+    transform 0.3s ease-out,
+    background-color 0.3s ease-out;
+}
+
+.button--hidden-part {
+  display: none;
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.button--visible-part {
+  display: inline;
+}
+
+.button:hover {
+  text-align: start;
+  background-color: #b6bba1;
+  transform: scale(1.01);
+  box-shadow: 1px 1px 1px #b6bba1;
+}
+
+.button:hover .button--hidden-part {
+  display: inline;
+}
