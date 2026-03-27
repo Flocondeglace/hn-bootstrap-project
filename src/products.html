@@ -4,7 +4,30 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Sweat Books</title>
-    <script type="module" src="./js/main.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .querySelectorAll('[data-bs-toggle="tooltip"]')
+          .forEach(function (element) {
+            new bootstrap.Tooltip(element);
+          });
+      });
+    </script>
+
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body
     class="container-lg bg-light border border-primary border-3 my-2 rounded-4"
@@ -122,7 +145,7 @@
       <h3>Pattern &#127912;</h3>
       <div class="table-responsive">
         <table
-          class="table table-striped table-sm table-bordered border-primary"
+          class="table table-striped table-sm table-bordered border-primary text-center"
         >
           <thead>
             <tr>
@@ -172,7 +195,7 @@
       <h3>Options &#128295;</h3>
       <div class="table-responsive">
         <table
-          class="table table-striped table-sm table-bordered border-primary"
+          class="table table-striped table-sm table-bordered border-primary text-center"
         >
           <thead>
             <tr>
